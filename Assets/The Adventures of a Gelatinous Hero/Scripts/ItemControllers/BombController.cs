@@ -3,15 +3,7 @@ using System.Collections;
 
 public class BombController : MonoBehaviour
 {
-    //explosion specific setting:
-    /*
-    public float startSize = 1;
-    public float endSize = 5;
-    public float explosionLength = 1;
-    */
-
-    //the above settings are applied to this prefab.
-    public GameObject explosionPrefab;
+    //public GameObject explosionPrefab;
 
     //bomb specific settings:
     public float timeDelay = 3;
@@ -31,18 +23,11 @@ public class BombController : MonoBehaviour
     }
 
     private SpriteRenderer _sr;
-    private GameObject explosion;
+    //private GameObject explosion;
 
     void OnEnable()
     {
-        explosion = Object.Instantiate(explosionPrefab) as GameObject;
-        explosion.SetActive(false);
-        //StartCoroutine("FlickerThenExplode");
-    }
-
-    public void ActivateBomb()
-    {
-        gameObject.SetActive(true);
+        //explosion = Object.Instantiate(explosionPrefab) as GameObject;
         StartCoroutine("FlickerThenExplode");
     }
 
@@ -55,8 +40,9 @@ public class BombController : MonoBehaviour
             yield return new WaitForSeconds(timeDelay / (float)numFlickers);
         }
 
-        explosion.transform.position = transform.position;
-        explosion.SetActive(true);
+        //explosion.transform.position = transform.position;
+        //explosion.SetActive(true);
+        ExplosionManager.SpawnExplosion();
         gameObject.SetActive(false);
         yield return new WaitForEndOfFrame();
     }

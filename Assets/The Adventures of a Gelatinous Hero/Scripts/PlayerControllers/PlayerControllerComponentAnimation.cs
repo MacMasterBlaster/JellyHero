@@ -8,7 +8,7 @@ public class PlayerControllerComponentAnimation : MonoBehaviour
     public float speed = 2;
     private Rigidbody2D _body;
     public MysteriousSwordController attackAnim;
-    public GameObject bombPrefab;
+    //public GameObject bombPrefab;
 
     public Rigidbody2D body
     {
@@ -20,13 +20,13 @@ public class PlayerControllerComponentAnimation : MonoBehaviour
 
     private Vector2 heading;
     private GameObject bomb;
-    private BombController bombCon;
+    //private BombController bombCon;
     void Awake()
     {
         _body = gameObject.GetComponent<Rigidbody2D>();
-        bomb = Object.Instantiate(bombPrefab) as GameObject;
-        bombCon = bomb.GetComponent<BombController>();
-        bomb.SetActive(false);
+        //bomb = Object.Instantiate(bombPrefab) as GameObject;
+        //bombCon = bomb.GetComponent<BombController>();
+        //bomb.SetActive(false);
 
         //daAnim = gameObject.GetComponent<DirectionalAttackAnimation>();
     }
@@ -72,7 +72,7 @@ public class PlayerControllerComponentAnimation : MonoBehaviour
         if (Input.GetButtonDown("Fire3"))
         {
             bomb.transform.position = gameObject.transform.position;
-            bombCon.ActivateBomb();
+            BombManager.SpawnBomb();
         }
     }
 }

@@ -25,8 +25,6 @@ public class ExplosionController : MonoBehaviour {
 
     void OnEnable()
     {
-        //transform.localScale = Vector3.one * 0.1f;
-
         StartCoroutine("ExplosionCoroutine");
     }
 
