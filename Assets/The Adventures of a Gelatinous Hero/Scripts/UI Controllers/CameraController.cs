@@ -4,7 +4,7 @@ using System.Collections;
 public class CameraController : MonoBehaviour {
 
 	public float speed = 3;
-
+    public Vector3 cameraOffset = Vector3.zero;
     public Transform target;
 
     void Start () {
@@ -18,7 +18,7 @@ public class CameraController : MonoBehaviour {
 				Time.deltaTime * speed
 			);
 			pos.z = transform.position.z;
-			transform.position = pos;
+			transform.position = pos + cameraOffset;
 		}
 	}
 }
