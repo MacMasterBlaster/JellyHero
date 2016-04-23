@@ -17,23 +17,12 @@ public class ExplosionManager : MonoBehaviour {
         }
     }
 
-    void OnEnable()
+    public static GameObject SpawnExplosion()
     {
-        StartCoroutine("SpawnCoroutine");
+        return instance.Spawn();
     }
 
-    IEnumerator SpawnCoroutine()
-    {
-        Spawn();
-        yield return new WaitForEndOfFrame();
-    }
-
-    public static void SpawnExplosion()
-    {
-        instance.StartCoroutine("SpawnCoroutine");
-    }
-
-    void Spawn()
+    public GameObject Spawn()
     {
         GameObject explosion = spawnedExplosions.Find(IsInactiveExplosion);
 
@@ -46,8 +35,7 @@ public class ExplosionManager : MonoBehaviour {
         {
             explosion.SetActive(true);
         }
-
-        explosion.transform.position = transform.position;
+        return explosion;
     }
 
     bool IsInactiveExplosion(GameObject explosion)

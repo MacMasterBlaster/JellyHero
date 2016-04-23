@@ -23,11 +23,9 @@ public class BombController : MonoBehaviour
     }
 
     private SpriteRenderer _sr;
-    //private GameObject explosion;
 
     void OnEnable()
     {
-        //explosion = Object.Instantiate(explosionPrefab) as GameObject;
         StartCoroutine("FlickerThenExplode");
     }
 
@@ -39,10 +37,8 @@ public class BombController : MonoBehaviour
             sr.color = (i % 2 == 0) ? flickerColor01 : flickerColor02;
             yield return new WaitForSeconds(timeDelay / (float)numFlickers);
         }
-
-        //explosion.transform.position = transform.position;
-        //explosion.SetActive(true);
-        ExplosionManager.SpawnExplosion();
+        GameObject explosion = ExplosionManager.SpawnExplosion();
+        explosion.transform.position = transform.position;
         gameObject.SetActive(false);
         yield return new WaitForEndOfFrame();
     }

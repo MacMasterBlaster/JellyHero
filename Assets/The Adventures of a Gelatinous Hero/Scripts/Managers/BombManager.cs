@@ -17,23 +17,12 @@ public class BombManager : MonoBehaviour {
         }
     }
 
-    void OnEnable()
+    public static GameObject SpawnBomb()
     {
-        StartCoroutine("SpawnCoroutine");
+        return instance.Spawn();
     }
 
-    IEnumerator SpawnCoroutine()
-    {
-        Spawn();
-        yield return new WaitForEndOfFrame();
-    }
-
-    public static void SpawnBomb()
-    {
-        instance.StartCoroutine("SpawnCoroutine");
-    }
-
-    void Spawn()
+    GameObject Spawn()
     {
         GameObject bomb = spawnedBombs.Find(IsInactiveBomb);
 
@@ -46,6 +35,7 @@ public class BombManager : MonoBehaviour {
         {
             bomb.SetActive(true);
         }
+        return bomb;
     }
 
     bool IsInactiveBomb(GameObject bomb)
