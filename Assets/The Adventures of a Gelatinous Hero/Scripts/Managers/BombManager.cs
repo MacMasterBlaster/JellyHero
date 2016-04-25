@@ -6,7 +6,8 @@ public class BombManager : MonoBehaviour {
     public static BombManager instance;
 
     public GameObject bombPrefab;
-
+    public int maxBombs = 5;
+    private int currentNumBombs;
     private List<GameObject> spawnedBombs = new List<GameObject>();
 
     void Awake()
@@ -42,4 +43,4 @@ public class BombManager : MonoBehaviour {
     {
         return !bomb.activeSelf;
     }
-}//EndOfScript
+}

@@ -3,8 +3,6 @@ using System.Collections;
 
 public class BombController : MonoBehaviour
 {
-    //public GameObject explosionPrefab;
-
     //bomb specific settings:
     public float timeDelay = 3;
     public Color flickerColor01 = new Color(255, 255, 255, 255);
@@ -33,7 +31,7 @@ public class BombController : MonoBehaviour
     {
         int numFlickers = 10;
         for (int i = 0; i < numFlickers; i ++)
-        {
+        {   //alternates color
             sr.color = (i % 2 == 0) ? flickerColor01 : flickerColor02;
             yield return new WaitForSeconds(timeDelay / (float)numFlickers);
         }

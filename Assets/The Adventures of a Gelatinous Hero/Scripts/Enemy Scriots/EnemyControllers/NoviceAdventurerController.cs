@@ -87,7 +87,7 @@ public class NoviceAdventurerController : MonoBehaviour {
                 (Mathf.Abs(player.transform.position.y - this.transform.position.y) < 0.5f)) &&
                 ((Vector3.Distance( player.transform.position, this.transform.position))) < lineOfSightDis)
             {
-                Debug.Log("HERE");
+                //Debug.Log("HERE");
                 Vector2 attackDir = (Vector2)(player.transform.position - transform.position);
                 if (attackDir.magnitude > 0.5f)
                 {

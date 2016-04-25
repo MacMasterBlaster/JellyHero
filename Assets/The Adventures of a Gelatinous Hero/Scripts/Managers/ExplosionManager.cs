@@ -42,4 +42,4 @@ public class ExplosionManager : MonoBehaviour {
     {
         return !explosion.activeSelf;
     }
-}//EndOfScript
+}
