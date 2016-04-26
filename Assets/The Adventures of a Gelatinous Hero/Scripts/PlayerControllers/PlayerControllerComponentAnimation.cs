@@ -47,14 +47,21 @@ public class PlayerControllerComponentAnimation : MonoBehaviour
             DirectionalComponent[] directionals = GetComponentsInChildren<DirectionalComponent>();
             foreach (DirectionalComponent dc in directionals)
             {
-                dc.SetDirection(new Vector2(x, y));
+                dc.direction = new Vector2(x, y);
             }
         }
 
-        DirectionalAnimation[] dirAnis = GetComponentsInChildren<DirectionalAnimation>();
-        foreach(DirectionalAnimation dirAni in dirAnis)
+        DirectionalAnimator[] dirAnis = GetComponentsInChildren<DirectionalAnimator>();
+        foreach (DirectionalAnimator dirAni in dirAnis)
         {
-            dirAni.speed = body.velocity.magnitude;
+            if (body.velocity.magnitude < 0.1f)
+            {
+                dirAni.PlayAnimation("Idle");
+            }
+            else
+            {
+                dirAni.PlayAnimation("Walk");
+            }
         }
 
         if (Input.GetButtonDown("Jump"))

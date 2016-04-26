@@ -12,23 +12,23 @@ public class HealthUIController : MonoBehaviour {
 
     void OnEnable()
     {
-        HealthController.onUpdateHealthEvent += UpdateUI;
+        HealthController.onAnyHealthChanged += UpdateUI;
     }
 
     //prevents the script from calling this function when it is disabled.
     void OnDisable()
     {
-        HealthController.onUpdateHealthEvent -= UpdateUI;
+        HealthController.onAnyHealthChanged -= UpdateUI;
     }
 
-    void UpdateUI (HealthController healthController)
+    void UpdateUI (HealthController healthController, float health, float prevHealth, float maxHealth)
     {
         if (healthController.gameObject.tag == tagName)
         {
-            healthText.text = tagName + " Health: " + healthController.health;
-            healthSlider.maxValue = healthController.maxHealth;
-            healthSlider.value = healthController.health;
-            healthSliderFillImage.color = healthGradient.Evaluate(healthController.HealthPct());
+            healthText.text = tagName + " Health: " + health;
+            healthSlider.maxValue = maxHealth;
+            healthSlider.value = health;
+            healthSliderFillImage.color = healthGradient.Evaluate(health / maxHealth);
         }
     }
 }

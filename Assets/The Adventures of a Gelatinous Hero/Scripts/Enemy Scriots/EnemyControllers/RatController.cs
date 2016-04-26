@@ -20,13 +20,11 @@ public class RatController : MonoBehaviour {
 
     private int[] nums = new int[]{ -1, 0, 1 };
     private Rigidbody2D _body;
-    //private DirectionalAttackAnimation daAnim;
-    private DirectionalCollider dc;
+    private DirectionalBoxCollider2D dc;
 
     void Awake()
     {
         _body = gameObject.GetComponent<Rigidbody2D>();
-        //daAnim = gameObject.GetComponent<DirectionalAttackAnimation>();
     }
 
     void Start()
@@ -41,14 +39,21 @@ public class RatController : MonoBehaviour {
             DirectionalComponent[] directionals = GetComponentsInChildren<DirectionalComponent>();
             foreach (DirectionalComponent dc in directionals)
             {
-                dc.SetDirection(body.velocity);
+                dc.direction = body.velocity;
             }
         }
 
-        DirectionalAnimation[] dirAnis = GetComponentsInChildren<DirectionalAnimation>();
-        foreach (DirectionalAnimation dirAni in dirAnis)
+        DirectionalAnimator[] dirAnis = GetComponentsInChildren<DirectionalAnimator>();
+        foreach (DirectionalAnimator dirAni in dirAnis)
         {
-            dirAni.speed = body.velocity.magnitude;
+            if (body.velocity.magnitude < 0.1f)
+            {
+                dirAni.PlayAnimation("Idle");
+            }
+            else
+            {
+                dirAni.PlayAnimation("Walk");
+            }
         }
 
         if ((Vector3.Distance(player.transform.position, this.transform.position)) <= attackTriggerDist)

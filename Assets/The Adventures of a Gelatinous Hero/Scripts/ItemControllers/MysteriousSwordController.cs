@@ -17,14 +17,14 @@ public class MysteriousSwordController : DirectionalComponent {
     public SpriteRenderer crossGuard;
     public SpriteRenderer pommel;
 
-    private DamageContoller _damCol;
-    public DamageContoller dc
+    private Damage _damCol;
+    public Damage dc
     {
         get
         {
             if (_damCol == null)
             {
-                _damCol = GetComponent<DamageContoller>();
+                _damCol = GetComponent<Damage>();
             }
             return _damCol;
         }

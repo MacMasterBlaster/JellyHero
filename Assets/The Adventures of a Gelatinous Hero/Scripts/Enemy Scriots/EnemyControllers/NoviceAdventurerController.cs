@@ -42,14 +42,21 @@ public class NoviceAdventurerController : MonoBehaviour {
             DirectionalComponent[] directionals = GetComponentsInChildren<DirectionalComponent>();
             foreach (DirectionalComponent dc in directionals)
             {
-                dc.SetDirection(body.velocity);
+                dc.direction = body.velocity;
             }
         }
 
-        DirectionalAnimation[] dirAnis = GetComponentsInChildren<DirectionalAnimation>();
-        foreach (DirectionalAnimation dirAni in dirAnis)
+        DirectionalAnimator[] dirAnis = GetComponentsInChildren<DirectionalAnimator>();
+        foreach (DirectionalAnimator dirAni in dirAnis)
         {
-            dirAni.speed = body.velocity.magnitude;
+            if (body.velocity.magnitude < 0.1f)
+            {
+                dirAni.PlayAnimation("Idle");
+            }
+            else
+            {
+                dirAni.PlayAnimation("Walk");
+            }
         }
     }
 
