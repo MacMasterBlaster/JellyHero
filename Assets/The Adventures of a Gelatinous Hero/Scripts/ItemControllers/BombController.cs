@@ -35,7 +35,7 @@ public class BombController : MonoBehaviour
             sr.color = (i % 2 == 0) ? flickerColor01 : flickerColor02;
             yield return new WaitForSeconds(timeDelay / (float)numFlickers);
         }
-        GameObject explosion = ExplosionManager.SpawnExplosion();
+        GameObject explosion = Spawner.Spawn("Explosion");
         explosion.transform.position = transform.position;
         gameObject.SetActive(false);
         yield return new WaitForEndOfFrame();

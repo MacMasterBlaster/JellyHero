@@ -89,7 +89,7 @@ public class NoviceAdventurerController : MonoBehaviour {
     IEnumerator CheckPlayerRangeCoroutine()
     {
         while (enabled)
-        {
+        {   //checks if player is along either x or y axis then checks to see if there are also in range.
             if (((Mathf.Abs(player.transform.position.x - this.transform.position.x) < 0.5f) ||
                 (Mathf.Abs(player.transform.position.y - this.transform.position.y) < 0.5f)) &&
                 ((Vector3.Distance( player.transform.position, this.transform.position))) < lineOfSightDis)
