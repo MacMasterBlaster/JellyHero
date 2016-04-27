@@ -50,9 +50,10 @@ public class RatsNestController : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if (gameObject.tag = "Player")
+        if (gameObject.tag == "Player")
         {
             isPlayerPresent = true;
+            Debug.Log("HERE");
         }
     }
 }
