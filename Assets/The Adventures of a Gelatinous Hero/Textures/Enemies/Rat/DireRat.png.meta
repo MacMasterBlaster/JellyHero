@@ -1,0 +1,465 @@
+fileFormatVersion: 2
+guid: ccf89e565582d194397efee28a8ba301
+timeCreated: 1461806367
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: DireRat_0
+    21300002: DireRat_1
+    21300004: DireRat_2
+    21300006: DireRat_3
+    21300008: DireRat_4
+    21300010: DireRat_5
+    21300012: DireRat_6
+    21300014: DireRat_7
+    21300016: DireRat_8
+    21300018: DireRat_9
+    21300020: DireRat_10
+    21300022: DireRat_11
+    21300024: DireRat_12
+    21300026: DireRat_13
+    21300028: DireRat_14
+    21300030: DireRat_15
+    21300032: DireRat_16
+    21300034: DireRat_17
+    21300036: DireRat_18
+    21300038: DireRat_19
+    21300040: DireRat_20
+    21300042: DireRat_21
+    21300044: DireRat_22
+    21300046: DireRat_23
+    21300048: DireRat_24
+    21300050: DireRat_25
+    21300052: DireRat_26
+    21300054: DireRat_27
+    21300056: DireRat_28
+    21300058: DireRat_29
+    21300060: DireRat_30
+    21300062: DireRat_31
+    21300064: DireRat_32
+    21300066: DireRat_33
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 24
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: DireRat_0
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 483
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: DireRat_1
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 497
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: DireRat_2
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 483
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: DireRat_3
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 499
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: DireRat_4
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 484
+        width: 30
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: DireRat_5
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 499
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: DireRat_6
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 477
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: DireRat_7
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 478
+        width: 12
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: DireRat_8
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 477
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: DireRat_9
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 477
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: DireRat_10
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 478
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: DireRat_11
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 478
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: DireRat_12
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 478
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: DireRat_13
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 478
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: DireRat_14
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 488
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: DireRat_15
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 484
+        width: 23
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: DireRat_16
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 483
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: DireRat_17
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 483
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: DireRat_18
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 451
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: DireRat_19
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 451
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: DireRat_20
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 451
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: DireRat_21
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 451
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: DireRat_22
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 451
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: DireRat_23
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 451
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: DireRat_24
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 451
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: DireRat_25
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 451
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: DireRat_26
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 425
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: DireRat_27
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 425
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: DireRat_28
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 396
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: DireRat_29
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 396
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: DireRat_30
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 374
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: DireRat_31
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 374
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: DireRat_32
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 347
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: DireRat_33
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 347
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
