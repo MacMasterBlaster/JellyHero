@@ -5,9 +5,9 @@ using System.Collections;
 
 public class ExplosionController : MonoBehaviour {
 
-    public float startSize = 1;
-    public float endSize = 5;
-    public float explosionLength = 1;
+    public float startSize = .5f;
+    public float endSize = 1.5f;
+    public float explosionLength = .3f;
 
     public CircleCollider2D cc
     {

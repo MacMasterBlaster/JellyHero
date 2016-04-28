@@ -2,8 +2,8 @@
 using System.Collections;
 
 public class FlickerComponent : MonoBehaviour {
-    public float duration = 3;
-    int numberOfFlickers = 5;
+    public float duration = 0.3f;
+    public int numberOfFlickers = 5;
     public Color flickerColor01 = new Color(255, 255, 255, 255);
     protected Color flickerColor02 = new Color(255, 255, 255, 255);
 
@@ -26,6 +26,7 @@ public class FlickerComponent : MonoBehaviour {
     void Awake()
     {
         healthController = GetComponent<HealthController>();
+        flickerColor02 = sr.color;
     }
 
     void OnEnable()
