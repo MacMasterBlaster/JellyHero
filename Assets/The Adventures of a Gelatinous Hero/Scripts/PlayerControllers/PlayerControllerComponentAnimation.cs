@@ -66,11 +66,12 @@ public class PlayerControllerComponentAnimation : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
+            //dirAni.PlayAnimation("Attack");
             attackAnim.StabAttack();
         }
         if (Input.GetButtonDown("Fire3"))
         {
-            GameObject bomb = BombManager.SpawnBomb();
+            GameObject bomb = Spawner.Spawn("Bomb");
             bomb.transform.position = gameObject.transform.position + (Vector3)heading.normalized * 0.5f;
         }
     }
