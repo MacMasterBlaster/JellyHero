@@ -46,7 +46,7 @@ public class MysteriousSwordController : DirectionalComponent {
     private Vector2 currentDir = Vector2.zero;
     protected float angle = 0f;
     private bool isAnimating = false;
-
+    
     void Awake()
     {
         DisableSword();
@@ -55,6 +55,7 @@ public class MysteriousSwordController : DirectionalComponent {
 
     public void EnableSword()
     {
+        isAnimating = true;
         if (isBladePresent)
         {
             blade.enabled = true;
@@ -67,6 +68,7 @@ public class MysteriousSwordController : DirectionalComponent {
 
     public void DisableSword()
     {
+        isAnimating = false;
         blade.enabled = false;
         grip.enabled = false;
         crossGuard.enabled = false;
@@ -121,23 +123,28 @@ public class MysteriousSwordController : DirectionalComponent {
 
     IEnumerator StabAttackCoroutine()
     {
-        isAnimating = true;
         EnableSword();
         angle = Mathf.Atan2(currentDir.y, currentDir.x) * Mathf.Rad2Deg;
         transform.localRotation = Quaternion.AngleAxis(angle, Vector3.forward);
         yield return new WaitForSeconds(stabInterval);
         DisableSword();
-        isAnimating = false;
     }
 
     IEnumerator SlashAttackCoroutine()
     {
-        isAnimating = true;
         EnableSword();
-
         angle = Mathf.Atan2(currentDir.y, currentDir.x) * Mathf.Rad2Deg;
-        float startAngle = angle - slashSpread * (currentDir.x * -1);
-        float endAngle = angle + slashSpread * (currentDir.x * -1);
+
+        float spread = slashSpread;
+
+        if (currentDir.y == 0)
+        {
+            spread *= -currentDir.x;
+        }
+                
+        float startAngle = angle - spread;
+        float endAngle = angle + spread;
+
         for (float t = 0; t < slashTime; t += Time.deltaTime)
         {
             float frac = t / slashTime;
@@ -145,9 +152,7 @@ public class MysteriousSwordController : DirectionalComponent {
             transform.localRotation = Quaternion.AngleAxis(ang, Vector3.forward);
             yield return new WaitForEndOfFrame();
         }
-
         DisableSword();
-        isAnimating = false;
     }
 
 }

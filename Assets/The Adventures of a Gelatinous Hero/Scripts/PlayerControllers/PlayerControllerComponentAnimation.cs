@@ -66,8 +66,7 @@ public class PlayerControllerComponentAnimation : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
-            //dirAni.PlayAnimation("Attack");
-            attackAnim.StabAttack();
+            attackAnim.SlashAttack();
         }
         if (Input.GetButtonDown("Fire3"))
         {
