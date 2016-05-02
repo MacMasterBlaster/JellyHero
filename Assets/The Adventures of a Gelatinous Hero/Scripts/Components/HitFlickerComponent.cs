@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class FlickerComponent : MonoBehaviour {
+public class HitFlickerComponent : MonoBehaviour {
     public float duration = 0.3f;
     public int numberOfFlickers = 5;
-    public Color flickerColor01 = new Color(255, 255, 255, 255);
-    protected Color flickerColor02 = new Color(255, 255, 255, 255);
+    public Color flickerColor = new Color(255, 255, 255, 255);
+    protected Color baseColor;
 
     private HealthController healthController;
 
@@ -26,7 +26,7 @@ public class FlickerComponent : MonoBehaviour {
     void Awake()
     {
         healthController = GetComponent<HealthController>();
-        flickerColor02 = sr.color;
+        baseColor = sr.color;
     }
 
     void OnEnable()
@@ -49,13 +49,16 @@ public class FlickerComponent : MonoBehaviour {
         int numFlickers = 10;
         for (int i = 0; i < numFlickers; i++)
         {   //alternates color
-            sr.color = (i % 2 == 0) ? flickerColor01 : flickerColor02;
+            sr.color = (i % 2 == 0) ? flickerColor : baseColor;
             yield return new WaitForSeconds(duration / (float)numFlickers);
         }
     }
 
     void OnHealthChanged(float health, float prevHealth, float maxHealth)
     {
-        Flicker();
+        if (health < prevHealth)
+        {
+            Flicker();
+        }
     }
 }
