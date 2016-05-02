@@ -3,11 +3,10 @@ using System.Collections;
 
 [RequireComponent(typeof(CircleCollider2D))]
 [RequireComponent(typeof(SpriteRenderer))]
-public class ItemDropPrefabController : MonoBehaviour
+public class ItemDropController : MonoBehaviour
 {
     public Sprite[] animationSprites;
     public float frameInterval = .2f;
-    private Sprite[] currentSprites;
     private SpriteRenderer _spriteRenderer;
 
     public SpriteRenderer spriteRenderer
@@ -22,26 +21,26 @@ public class ItemDropPrefabController : MonoBehaviour
         }
     }
 
-    void Awake()
+    void OnEnable()
     {
-        while (enabled)
-        {
-            StartCoroutine("Animate");
-        }
+        StartCoroutine("Animate");
     }
 
     IEnumerator Animate()
     {
-        for (int i = 0; i <= animationSprites.Length; i++)
+        while (enabled)
         {
-            spriteRenderer.sprite = currentSprites[i];
+            for (int i = 0; i < animationSprites.Length; i++)
+            {
+                spriteRenderer.sprite = animationSprites[i];
+                yield return new WaitForSeconds(frameInterval);
+            }
         }
-        yield return new WaitForSeconds(frameInterval);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             gameObject.SetActive(false);
             Debug.Log("You Got Me");
