@@ -56,10 +56,10 @@ public class RatController : MonoBehaviour {
             }
         }
 
-        if ((Vector3.Distance(player.transform.position, this.transform.position)) <= attackTriggerDist)
-        {
-            //play squeak attack sound
-        }
+        //if ((Vector3.Distance(player.transform.position, this.transform.position)) <= attackTriggerDist)
+        //{
+        //    //play squeak attack sound
+        //}
     }
 
     IEnumerator PatrolCoroutine()
