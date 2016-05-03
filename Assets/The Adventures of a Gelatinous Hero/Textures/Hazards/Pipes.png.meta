@@ -1,11 +1,14 @@
 fileFormatVersion: 2
-guid: b9e7253d643b10d498d972fe575e1eca
-timeCreated: 1462241933
+guid: 0bbc5d50c67a33843a8978d6a1ca239e
+timeCreated: 1462241815
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Skull_0
-    21300002: Skull_1
+    21300000: Pipes_0
+    21300002: Pipes_1
+    21300004: Pipes_2
+    21300006: Pipes_3
+    21300008: Pipes_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -52,7 +55,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Skull_0
+    - name: Pipes_0
       rect:
         serializedVersion: 2
         x: 0
@@ -63,10 +66,43 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Skull_1
+    - name: Pipes_1
       rect:
         serializedVersion: 2
         x: 24
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Pipes_2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Pipes_3
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Pipes_4
+      rect:
+        serializedVersion: 2
+        x: 96
         y: 0
         width: 24
         height: 24
