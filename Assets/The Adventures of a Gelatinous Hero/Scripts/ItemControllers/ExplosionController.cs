@@ -38,6 +38,7 @@ public class ExplosionController : MonoBehaviour {
             cc.radius = Mathf.Lerp(startSize, endSize, fraction);
             yield return new WaitForEndOfFrame();
         }
+        cc.radius = endSize;
         gameObject.SetActive(false);
     }
 }

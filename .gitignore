@@ -8,6 +8,6 @@ capture/*
 Assembly-*
 Library/*
 Temp/*
-
+*.csproj
 *.sln
 *.userprefs
