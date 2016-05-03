@@ -12,6 +12,7 @@ public class HealthUIController : MonoBehaviour {
 
     void OnEnable()
     {
+        healthSliderFillImage.color = healthGradient.Evaluate(1);
         HealthController.onAnyHealthChanged += UpdateUI;
     }
 
@@ -25,7 +26,7 @@ public class HealthUIController : MonoBehaviour {
     {
         if (healthController.gameObject.tag == tagName)
         {
-            healthText.text = tagName + " Health: " + health;
+            //healthText.text = tagName + " Health: " + health;
             healthSlider.maxValue = maxHealth;
             healthSlider.value = health;
             healthSliderFillImage.color = healthGradient.Evaluate(health / maxHealth);

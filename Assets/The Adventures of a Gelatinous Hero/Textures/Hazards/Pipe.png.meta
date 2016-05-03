@@ -1,12 +1,14 @@
 fileFormatVersion: 2
-guid: 96099a33968e7a04cb9fe8c47ffd1144
-timeCreated: 1462245628
+guid: 0bbc5d50c67a33843a8978d6a1ca239e
+timeCreated: 1462242703
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Barrel 1_0
-    21300002: BarrelDestroyed
-    21300004: Planks
+    21300000: Pipe_Right
+    21300002: Pipe_Left
+    21300004: Pipe_Down
+    21300006: Pipe_UP
+    21300008: Pipe_Broken
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -53,7 +55,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Barrel 1_0
+    - name: Pipe_Right
       rect:
         serializedVersion: 2
         x: 0
@@ -64,7 +66,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: BarrelDestroyed
+    - name: Pipe_Left
       rect:
         serializedVersion: 2
         x: 24
@@ -75,10 +77,32 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Planks
+    - name: Pipe_Down
       rect:
         serializedVersion: 2
         x: 48
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Pipe_UP
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Pipe_Broken
+      rect:
+        serializedVersion: 2
+        x: 96
         y: 0
         width: 24
         height: 24
