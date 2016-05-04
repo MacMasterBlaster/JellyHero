@@ -1,13 +1,14 @@
 fileFormatVersion: 2
-guid: 87e1c5f4eaf53dc438fe72a4d4336b6f
-timeCreated: 1462319258
+guid: 84b2fd6cc3bdd3d4caf47a29b946ec71
+timeCreated: 1462241815
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Puddle_0
-    21300002: Puddle_1
-    21300004: Puddle_2
-    21300006: Puddle_3
+    21300000: Pipes_0
+    21300002: Pipes_1
+    21300004: Pipes_2
+    21300006: Pipes_3
+    21300008: Pipes_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,10 +31,10 @@ TextureImporter:
   cubemapConvolutionSteps: 7
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -1
+  textureFormat: -3
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 0
     aniso: 16
     mipBias: -1
     wrapMode: 1
@@ -48,13 +49,13 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 24
+  spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Puddle_0
+    - name: Pipes_0
       rect:
         serializedVersion: 2
         x: 0
@@ -65,7 +66,7 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Puddle_1
+    - name: Pipes_1
       rect:
         serializedVersion: 2
         x: 24
@@ -76,7 +77,7 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Puddle_2
+    - name: Pipes_2
       rect:
         serializedVersion: 2
         x: 48
@@ -87,10 +88,21 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Puddle_3
+    - name: Pipes_3
       rect:
         serializedVersion: 2
         x: 72
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Pipes_4
+      rect:
+        serializedVersion: 2
+        x: 96
         y: 0
         width: 24
         height: 24
