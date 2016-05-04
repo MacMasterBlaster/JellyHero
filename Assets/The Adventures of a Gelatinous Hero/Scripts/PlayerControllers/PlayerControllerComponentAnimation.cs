@@ -4,7 +4,6 @@ using System.Collections;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerControllerComponentAnimation : MonoBehaviour
 {
-
     public float speed = 2;
     private Rigidbody2D _body;
     public MysteriousSwordController attackAnim;
@@ -70,8 +69,16 @@ public class PlayerControllerComponentAnimation : MonoBehaviour
         }
         if (Input.GetButtonDown("Fire3"))
         {
-            GameObject bomb = Spawner.Spawn("Bomb");
-            bomb.transform.position = gameObject.transform.position + (Vector3)heading.normalized * 0.5f;
+            if (InventoryManager.instance.bombCount > 0)
+            {
+                GameObject bomb = Spawner.Spawn("Bomb");
+                bomb.transform.position = gameObject.transform.position + (Vector3)heading.normalized * 0.5f;
+                InventoryManager.SubtractFromBombCount(1);
+            }
+            else
+            {
+                Debug.Log("No more bombs dummy!!!");
+            }
         }
     }
 }

@@ -7,6 +7,7 @@ public class ItemDropController : MonoBehaviour
 {
     public Sprite[] animationSprites;
     public float frameInterval = .2f;
+    public string itemName;
     private SpriteRenderer _spriteRenderer;
 
     public SpriteRenderer spriteRenderer
@@ -43,7 +44,7 @@ public class ItemDropController : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             gameObject.SetActive(false);
-            Debug.Log("You Got Me");
+            InventoryManager.AddToCount(itemName, 1);
         }
     }
 }

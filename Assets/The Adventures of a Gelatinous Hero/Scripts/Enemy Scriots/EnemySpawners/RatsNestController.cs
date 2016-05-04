@@ -30,7 +30,6 @@ public class RatsNestController : MonoBehaviour {
 
     void Awake()
     {
-        _bc = gameObject.GetComponent<BoxCollider2D>();
         _cc = gameObject.GetComponent<CircleCollider2D>();
     }
     
