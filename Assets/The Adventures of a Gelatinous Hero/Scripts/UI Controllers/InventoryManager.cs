@@ -65,6 +65,4 @@ public class InventoryManager : MonoBehaviour {
             return;
         }
     }
-
-    // TODO: add subtract from count for bomb
 }
