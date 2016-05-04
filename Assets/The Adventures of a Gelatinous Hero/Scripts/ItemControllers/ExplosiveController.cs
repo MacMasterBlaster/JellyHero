@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BombController : MonoBehaviour
+public class ExplosiveController : MonoBehaviour
 {
     //bomb specific settings:
     public float timeDelay = 0.5f;
     public Color flickerColor = new Color(255, 255, 255, 255);
-    protected Color baseColor;
+    public string craterPrefabName;
+    public bool isTriggered = false;
 
     public SpriteRenderer sr
     {
@@ -20,12 +21,21 @@ public class BombController : MonoBehaviour
         }
     }
 
+    private Color baseColor;
+    //private HealthController healthController;
     private SpriteRenderer _sr;
 
     void OnEnable()
     {
         baseColor = sr.color;
-        StartCoroutine("FlickerThenExplode");
+        if (!isTriggered)
+        {
+            StartCoroutine("FlickerThenExplode");
+        }
+        //else
+        //{
+        //    healthController = GetComponent<HealthController>();
+        //}
     }
 
     IEnumerator FlickerThenExplode()
@@ -39,6 +49,21 @@ public class BombController : MonoBehaviour
         GameObject explosion = Spawner.Spawn("Explosion");
         explosion.transform.position = transform.position;
         gameObject.SetActive(false);
+
+        if (craterPrefabName != null)
+        {
+            GameObject crater = Spawner.Spawn(craterPrefabName);
+            crater.transform.position = transform.position;
+        }
         yield return new WaitForEndOfFrame();
     }
+
+    void OnDeath()
+    {
+        if (isTriggered)
+        {
+            StartCoroutine("FlickerThenExplode");
+        }
+    }
+
 }
