@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 38e4c3362f7187e4ca24374b8d84624f
-timeCreated: 1462402001
+timeCreated: 1462404052
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -12,17 +12,17 @@ TextureImporter:
     21300010: Olaf Dead02
     21300012: Olaf Sprites_6
     21300014: Olaf Sprites_7
-    21300016: Olaf Sprites_8
-    21300018: Olaf Sprites_9
-    21300020: Olaf Sprites_10
-    21300022: Olaf Sprites_11
-    21300024: Olaf Sprites_12
-    21300026: Olaf Sprites_13
-    21300028: Olaf Sprites_14
-    21300030: Olaf Sprites_15
-    21300032: Olaf Sprites_16
-    21300034: Olaf Sprites_17
-    21300036: Olaf Sprites_18
+    21300016: Olaf Shield Down
+    21300018: Olaf Shield Up
+    21300020: Olaf LeftArmDestroyed
+    21300022: Olaf RightArm02
+    21300024: Olaf RightArm01
+    21300026: Olaf RightArm03
+    21300028: Olaf RightArmDestroyed
+    21300030: Olaf SpearShaft
+    21300032: Olaf SpearHead
+    21300034: Olaf HeadHappy
+    21300036: Olaf HeadMad
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -45,7 +45,7 @@ TextureImporter:
   cubemapConvolutionSteps: 7
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -1
+  textureFormat: -3
   maxTextureSize: 2048
   textureSettings:
     filterMode: 0
@@ -143,7 +143,7 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Olaf Sprites_7
@@ -157,7 +157,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Olaf Sprites_8
+    - name: Olaf Shield Down
       rect:
         serializedVersion: 2
         x: 192
@@ -165,10 +165,10 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Olaf Sprites_9
+    - name: Olaf Shield Up
       rect:
         serializedVersion: 2
         x: 216
@@ -176,10 +176,10 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Olaf Sprites_10
+    - name: Olaf LeftArmDestroyed
       rect:
         serializedVersion: 2
         x: 240
@@ -187,10 +187,10 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Olaf Sprites_11
+    - name: Olaf RightArm02
       rect:
         serializedVersion: 2
         x: 264
@@ -198,10 +198,10 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Olaf Sprites_12
+    - name: Olaf RightArm01
       rect:
         serializedVersion: 2
         x: 288
@@ -209,10 +209,10 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Olaf Sprites_13
+    - name: Olaf RightArm03
       rect:
         serializedVersion: 2
         x: 312
@@ -220,10 +220,10 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Olaf Sprites_14
+    - name: Olaf RightArmDestroyed
       rect:
         serializedVersion: 2
         x: 336
@@ -231,10 +231,10 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Olaf Sprites_15
+    - name: Olaf SpearShaft
       rect:
         serializedVersion: 2
         x: 360
@@ -242,10 +242,10 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Olaf Sprites_16
+    - name: Olaf SpearHead
       rect:
         serializedVersion: 2
         x: 384
@@ -253,10 +253,10 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Olaf Sprites_17
+    - name: Olaf HeadHappy
       rect:
         serializedVersion: 2
         x: 408
@@ -264,10 +264,10 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Olaf Sprites_18
+    - name: Olaf HeadMad
       rect:
         serializedVersion: 2
         x: 432
@@ -275,7 +275,7 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     outline: []
