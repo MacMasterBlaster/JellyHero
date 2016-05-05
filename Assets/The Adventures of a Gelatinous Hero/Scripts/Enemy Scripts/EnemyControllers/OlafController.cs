@@ -5,7 +5,7 @@ public class OlafController : MonoBehaviour
 {
 
     public float speed = 1;
-    public float attackFrameInterval = .3f;
+    public float attackInterval = .3f;
     private Rigidbody2D _body;
     private Animator animator;
 
@@ -25,12 +25,13 @@ public class OlafController : MonoBehaviour
 
     IEnumerator Thrust()
     {
-        animator.Play("Thrust");
-        yield return new WaitForSeconds(attackFrameInterval);
+        animator.SetTrigger("Thrust");
+        yield return new WaitForSeconds(attackInterval);
     }
 
     IEnumerator Walk()
     {
-        yield return new WaitForSeconds(attackFrameInterval);
+
+        yield return new WaitForSeconds(attackInterval);
     }
 }
