@@ -9,6 +9,7 @@ public class OlafController : MonoBehaviour
     public float attackInterval = .3f;
     public float walkTime = 5;
     public float jumpTime = 1;
+    public float waitTime = 2;
     private Rigidbody2D _body;
     private Animator animator;
 
@@ -29,7 +30,8 @@ public class OlafController : MonoBehaviour
 
     IEnumerator Pattern1()
     {
-        Debug.Log("HERE");
+        body.velocity = Vector2.zero;
+        yield return new WaitForSeconds(waitTime);
         body.velocity = Vector2.down * walkSpeed;
         yield return new WaitForSeconds(walkTime);
         body.velocity = Vector2.zero;
