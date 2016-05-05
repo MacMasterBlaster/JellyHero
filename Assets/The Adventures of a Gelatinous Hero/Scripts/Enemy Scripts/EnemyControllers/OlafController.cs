@@ -24,39 +24,20 @@ public class OlafController : MonoBehaviour
     {
         _body = gameObject.GetComponent<Rigidbody2D>();
         animator = gameObject.GetComponent<Animator>();
-        //StartCoroutine("Walk");
-        Charge();
+        StartCoroutine("Pattern1");
     }
 
-    void Charge()
+    IEnumerator Pattern1()
     {
-        StartCoroutine("Walk");
-        ThrustAttack();
-        StartCoroutine("Walk");
-    }
-
-    void ThrustAttack()
-    {
-        StartCoroutine("Thrust");
-    }
-
-    IEnumerator Thrust()
-    {
-        animator.SetTrigger("Thrust");
-        StopCoroutine("Walk");
-        //body.velocity = Vector2.zero;
-        yield return new WaitForSeconds(attackInterval);
-    }
-
-    IEnumerator Walk()
-    {
+        Debug.Log("HERE");
         body.velocity = Vector2.down * walkSpeed;
         yield return new WaitForSeconds(walkTime);
+        body.velocity = Vector2.zero;
+        animator.SetTrigger("Thrust");
     }
 
-    IEnumerator Jump()
+    public void Jump ()
     {
         body.velocity = Vector2.up * jumpSpeed;
-        yield return new WaitForSeconds(jumpTime);
     }
 }
