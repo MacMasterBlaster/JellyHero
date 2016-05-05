@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 38e4c3362f7187e4ca24374b8d84624f
-timeCreated: 1462404052
+timeCreated: 1462489681
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -10,8 +10,8 @@ TextureImporter:
     21300006: Olaf Crouch
     21300008: Olaf Dead01
     21300010: Olaf Dead02
-    21300012: Olaf Sprites_6
-    21300014: Olaf Sprites_7
+    21300012: Olaf Blood
+    21300014: Olaf Eyebrows
     21300016: Olaf Shield Down
     21300018: Olaf Shield Up
     21300020: Olaf LeftArmDestroyed
@@ -23,6 +23,21 @@ TextureImporter:
     21300032: Olaf SpearHead
     21300034: Olaf HeadHappy
     21300036: Olaf HeadMad
+    21300038: Olaf Walk 01
+    21300040: Olaf Walk 02
+    21300042: Olaf Jump
+    21300044: Olaf Dead 01
+    21300046: Olaf Dead 02
+    21300048: Olaf Shield Idle
+    21300050: Olaf Shield Ready
+    21300052: Olaf Right Arm Stump
+    21300054: Olaf Left Arm Idle
+    21300056: Olaf Left Arm Back
+    21300058: Olaf Left Arm Thrust
+    21300060: Olaf Left Arm Stump
+    21300062: Olaf Spear Shaft
+    21300064: Olaf Spearhead
+    21300066: Olaf Spearhead Swing
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -80,7 +95,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Olaf Walk01
+    - name: Olaf Walk 01
       rect:
         serializedVersion: 2
         x: 24
@@ -91,7 +106,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Olaf Walk02
+    - name: Olaf Walk 02
       rect:
         serializedVersion: 2
         x: 48
@@ -102,7 +117,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Olaf Crouch
+    - name: Olaf Jump
       rect:
         serializedVersion: 2
         x: 72
@@ -113,7 +128,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Olaf Dead01
+    - name: Olaf Dead 01
       rect:
         serializedVersion: 2
         x: 96
@@ -124,7 +139,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Olaf Dead02
+    - name: Olaf Dead 02
       rect:
         serializedVersion: 2
         x: 120
@@ -135,7 +150,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Olaf Sprites_6
+    - name: Olaf Blood
       rect:
         serializedVersion: 2
         x: 144
@@ -146,7 +161,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Olaf Sprites_7
+    - name: Olaf Eyebrows
       rect:
         serializedVersion: 2
         x: 168
@@ -157,7 +172,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Olaf Shield Down
+    - name: Olaf Shield Idle
       rect:
         serializedVersion: 2
         x: 192
@@ -168,7 +183,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Olaf Shield Up
+    - name: Olaf Shield Ready
       rect:
         serializedVersion: 2
         x: 216
@@ -179,7 +194,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Olaf LeftArmDestroyed
+    - name: Olaf Right Arm Stump
       rect:
         serializedVersion: 2
         x: 240
@@ -190,7 +205,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Olaf RightArm02
+    - name: Olaf Left Arm Idle
       rect:
         serializedVersion: 2
         x: 264
@@ -201,7 +216,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Olaf RightArm01
+    - name: Olaf Left Arm Back
       rect:
         serializedVersion: 2
         x: 288
@@ -212,7 +227,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Olaf RightArm03
+    - name: Olaf Left Arm Thrust
       rect:
         serializedVersion: 2
         x: 312
@@ -223,7 +238,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Olaf RightArmDestroyed
+    - name: Olaf Left Arm Stump
       rect:
         serializedVersion: 2
         x: 336
@@ -234,7 +249,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Olaf SpearShaft
+    - name: Olaf Spear Shaft
       rect:
         serializedVersion: 2
         x: 360
@@ -245,7 +260,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Olaf SpearHead
+    - name: Olaf Spearhead
       rect:
         serializedVersion: 2
         x: 384
@@ -271,6 +286,17 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 432
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Olaf Spearhead Swing
+      rect:
+        serializedVersion: 2
+        x: 456
         y: 0
         width: 24
         height: 24
