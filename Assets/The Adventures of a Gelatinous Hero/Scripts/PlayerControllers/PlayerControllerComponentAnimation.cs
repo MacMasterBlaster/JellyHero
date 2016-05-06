@@ -63,11 +63,11 @@ public class PlayerControllerComponentAnimation : MonoBehaviour
             }
         }
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("sword"))
         {
             attackAnim.SlashAttack();
         }
-        if (Input.GetButtonDown("Fire3"))
+        if (Input.GetButtonDown("bomb"))
         {
             if (InventoryManager.instance.bombCount > 0)
             {
