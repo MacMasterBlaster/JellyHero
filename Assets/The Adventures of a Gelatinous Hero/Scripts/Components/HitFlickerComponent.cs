@@ -4,10 +4,10 @@ using System.Collections;
 public class HitFlickerComponent : MonoBehaviour {
     public float duration = 0.3f;
     public int numberOfFlickers = 5;
-    public Color flickerColor = new Color(255, 255, 255, 255);
+    public Color flickerColor = new Color(255, 0, 0, 255);
     protected Color baseColor;
 
-    private HealthController healthController;
+    public HealthController healthController;
 
     public SpriteRenderer sr
     {
@@ -25,7 +25,10 @@ public class HitFlickerComponent : MonoBehaviour {
 
     void Awake()
     {
-        healthController = GetComponent<HealthController>();
+        if (healthController == null)
+        {
+            healthController = GetComponent<HealthController>();
+        }
         baseColor = sr.color;
     }
 

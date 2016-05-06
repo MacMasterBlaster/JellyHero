@@ -5,9 +5,9 @@ using System.Collections;
 
 public class ExplosionController : MonoBehaviour {
 
-    public float startSize = .5f;
-    public float endSize = 1.5f;
-    public float explosionLength = .3f;
+    public float colliderLifeTime = 1;
+    public float colliderSize = 1.5f;
+    public float explosionLifeTime = 1.5f;
 
     public CircleCollider2D cc
     {
@@ -30,15 +30,10 @@ public class ExplosionController : MonoBehaviour {
 
     IEnumerator ExplosionCoroutine()
     {
-        float t = 0;
-        while (t <= explosionLength)
-        {
-            t += Time.deltaTime;
-            float fraction = t / explosionLength;
-            cc.radius = Mathf.Lerp(startSize, endSize, fraction);
-            yield return new WaitForEndOfFrame();
-        }
-        cc.radius = endSize;
+        cc.radius = colliderSize;
+        yield return new WaitForSeconds(colliderLifeTime);
+        cc.enabled = false;
+        yield return new WaitForSeconds(explosionLifeTime - colliderLifeTime);
         gameObject.SetActive(false);
     }
 }

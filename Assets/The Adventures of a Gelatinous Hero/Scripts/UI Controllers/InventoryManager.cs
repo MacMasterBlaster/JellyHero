@@ -18,18 +18,36 @@ public class InventoryManager : MonoBehaviour {
         {
             instance = this;
         }
-        SetBombCountText();
-        SetCoinCountText();
+        if (bombCounterText != null && coinCounterText != null)
+        {
+            SetBombCountText();
+            SetCoinCountText();
+        }
     }
 
     void SetBombCountText()
     {
-        bombCounterText.text = "X " + bombCount;
+        if (bombCounterText != null)
+        {
+            bombCounterText.text = "X " + bombCount;
+        }
+        else
+        {
+            Debug.Log("No Bomb Counter Present");
+        }
     }
 
     void SetCoinCountText()
     {
-        coinCounterText.text = "X " + coinCount;
+        if (coinCounterText != null)
+            {
+                coinCounterText.text = "X " + coinCount;
+            }
+        else
+        {
+            Debug.Log("No Coin Counter Present");
+        }
+
     }
 
     public static void AddToBombCount(int count)
