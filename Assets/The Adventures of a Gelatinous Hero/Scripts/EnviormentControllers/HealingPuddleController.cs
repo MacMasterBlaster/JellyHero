@@ -22,6 +22,11 @@ public class HealingPuddleController : MonoBehaviour {
         }
     }
 
+    void Awake ()
+    {
+        remainingHeal = maxHeal;
+    }
+
     public void CheckRemainingHealth()
     {
         if (remainingHeal <= 0)
@@ -30,15 +35,17 @@ public class HealingPuddleController : MonoBehaviour {
         }
     }
 
-        void OnTriggerStay2D(Collider2D collider)
+    void OnTriggerStay2D(Collider2D collider)
     {
         HealthController h = collider.gameObject.GetComponent<HealthController>();
         if (affectAncestor && h == null) h = collider.gameObject.GetAncestorComponent<HealthController>();
-        if (h != null) h.Heal(healthPerSecond * Time.deltaTime, false);
-        scaler = remainingHeal / maxHeal;
-        remainingHeal = maxHeal - (healthPerSecond * Time.deltaTime);
-        gameObject.transform.localScale *= scaler;
-        //CheckRemainingHealth();
+        if (h != null && h.Heal(Mathf.Min(healthPerSecond * Time.deltaTime, remainingHeal), false))
+        {
+            remainingHeal -= (healthPerSecond * Time.deltaTime);
+            //scaler = remainingHeal / maxHeal;
+            //gameObject.transform.localScale *= scaler ;
+        }
+        CheckRemainingHealth();
     }
 
     void OnCollisionStay2D(Collision2D collision)
@@ -46,9 +53,8 @@ public class HealingPuddleController : MonoBehaviour {
         HealthController h = collision.gameObject.GetComponent<HealthController>();
         if (h == null) h = collision.gameObject.GetAncestorComponent<HealthController>();
         if (h != null) h.Heal(healthPerSecond * Time.deltaTime, false);
-        scaler = remainingHeal / maxHeal;
         remainingHeal = maxHeal - (healthPerSecond * Time.deltaTime);
+        scaler = remainingHeal / maxHeal;
         gameObject.transform.localScale *= scaler;
-        //CheckRemainingHealth();
     }
 }

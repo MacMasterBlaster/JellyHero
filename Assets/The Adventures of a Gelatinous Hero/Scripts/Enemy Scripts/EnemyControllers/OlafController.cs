@@ -46,6 +46,7 @@ public class OlafController : MonoBehaviour
         else
         {
             animator.SetTrigger("Thrust");
+            animator.SetTrigger("Agro");
         }
     }
 
