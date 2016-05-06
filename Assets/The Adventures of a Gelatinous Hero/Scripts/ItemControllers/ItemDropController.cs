@@ -8,6 +8,7 @@ public class ItemDropController : MonoBehaviour
     public Sprite[] animationSprites;
     public float frameInterval = .2f;
     public string itemName;
+    public bool randomize = false;
     private SpriteRenderer _spriteRenderer;
 
     public SpriteRenderer spriteRenderer
@@ -31,9 +32,11 @@ public class ItemDropController : MonoBehaviour
     {
         while (enabled)
         {
+            int offset = Random.Range(0, animationSprites.Length - 1);
+            if (!randomize) offset = 0;
             for (int i = 0; i < animationSprites.Length; i++)
             {
-                spriteRenderer.sprite = animationSprites[i];
+                spriteRenderer.sprite = animationSprites[(i + offset) % animationSprites.Length];
                 yield return new WaitForSeconds(frameInterval);
             }
         }
@@ -45,6 +48,10 @@ public class ItemDropController : MonoBehaviour
         {
             gameObject.SetActive(false);
             InventoryManager.AddToCount(itemName, 1);
+        }
+        else if (collision.gameObject.tag == "Water")
+        {
+            gameObject.SetActive(false);
         }
     }
 }

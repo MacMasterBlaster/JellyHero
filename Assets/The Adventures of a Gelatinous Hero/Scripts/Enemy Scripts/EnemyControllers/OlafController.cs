@@ -5,11 +5,12 @@ public class OlafController : MonoBehaviour
 {
 
     public float walkSpeed = 1;
-    public float jumpSpeed = 3;
-    public float attackInterval = .3f;
+    public float jumpSpeed = 10;
+    public float attackInterval = 5;
     public float walkTime = 5;
-    public float jumpTime = 1;
+    public float jumpTime = 5;
     public float waitTime = 2;
+    public float agroHealth = 5;
     private Rigidbody2D _body;
     private Animator animator;
     private HealthController healthController;
@@ -38,9 +39,9 @@ public class OlafController : MonoBehaviour
         body.velocity = Vector2.down * walkSpeed;
         yield return new WaitForSeconds(walkTime);
         body.velocity = Vector2.zero;
-        if (healthController.health <= 10)
+        if (healthController.health <= agroHealth)
         {
-            animator.SetTrigger("Swipe");
+            animator.SetTrigger("Swing");
         }
         else
         {

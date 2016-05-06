@@ -72,7 +72,7 @@ public class PlayerControllerComponentAnimation : MonoBehaviour
             if (InventoryManager.instance.bombCount > 0)
             {
                 GameObject bomb = Spawner.Spawn("Bomb");
-                bomb.transform.position = gameObject.transform.position + (Vector3)heading.normalized * 0.5f;
+                bomb.transform.position = attackAnim.transform.position;
                 InventoryManager.SubtractFromBombCount(1);
             }
             else
