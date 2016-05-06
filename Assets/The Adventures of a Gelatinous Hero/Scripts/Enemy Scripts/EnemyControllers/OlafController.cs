@@ -12,6 +12,7 @@ public class OlafController : MonoBehaviour
     public float waitTime = 2;
     private Rigidbody2D _body;
     private Animator animator;
+    private HealthController healthController;
 
     public Rigidbody2D body
     {
@@ -25,17 +26,26 @@ public class OlafController : MonoBehaviour
     {
         _body = gameObject.GetComponent<Rigidbody2D>();
         animator = gameObject.GetComponent<Animator>();
-        StartCoroutine("Pattern1");
+        healthController = gameObject.GetComponent<HealthController>();
+
+        StartCoroutine("Pattern");
     }
 
-    IEnumerator Pattern1()
+    IEnumerator Pattern()
     {
         body.velocity = Vector2.zero;
         yield return new WaitForSeconds(waitTime);
         body.velocity = Vector2.down * walkSpeed;
         yield return new WaitForSeconds(walkTime);
         body.velocity = Vector2.zero;
-        animator.SetTrigger("Thrust");
+        if (healthController.health <= 10)
+        {
+            animator.SetTrigger("Swipe");
+        }
+        else
+        {
+            animator.SetTrigger("Thrust");
+        }
     }
 
     public void Jump ()
