@@ -1,9 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Paraphernalia.Components;
+using Paraphernalia.Utils;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerControllerComponentAnimation : MonoBehaviour
 {
+    public AudioSource LowHealthSound;
+    public AudioSource movementSound;
     public float speed = 2;
     private Rigidbody2D _body;
     public MysteriousSwordController attackAnim;
@@ -17,8 +21,12 @@ public class PlayerControllerComponentAnimation : MonoBehaviour
     }
 
     private Vector2 heading;
+
+    private HealthController healthController;
+
     void Awake()
     {
+        healthController = GetComponent<HealthController>();
         _body = gameObject.GetComponent<Rigidbody2D>();
     }
 
@@ -41,13 +49,20 @@ public class PlayerControllerComponentAnimation : MonoBehaviour
         }
 
         body.velocity = new Vector2(x, y) * speed;
+
         if (body.velocity.magnitude > 0.1f)
         {
+            if (!movementSound.isPlaying) movementSound.Play();
+            
             DirectionalComponent[] directionals = GetComponentsInChildren<DirectionalComponent>();
             foreach (DirectionalComponent dc in directionals)
             {
                 dc.direction = new Vector2(x, y);
             }
+        }
+        else if (movementSound.isPlaying)
+        {
+            movementSound.Stop();
         }
 
         DirectionalAnimator[] dirAnis = GetComponentsInChildren<DirectionalAnimator>();
@@ -80,5 +95,32 @@ public class PlayerControllerComponentAnimation : MonoBehaviour
                 Debug.Log("No more bombs dummy!!!");
             }
         }
+    }
+
+    void OnEnable()
+    {
+        healthController.onHealthChanged += OnHealthChanged;
+    }
+
+    private void OnHealthChanged(float health, float prevHealth, float maxHealth)
+    {
+        if (health <= (maxHealth / 3f) && !LowHealthSound.isPlaying)
+        {
+            LowHealthSound.Play();
+        }
+        else if (health >= (maxHealth / 3f) && LowHealthSound.isPlaying)
+        {
+            LowHealthSound.Stop();
+        }
+    }
+
+    void OnDisable()
+    {
+        healthController.onHealthChanged -= OnHealthChanged;
+    }
+
+    void OnHealthChanged()
+    {
+
     }
 }
