@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Paraphernalia.Extensions;
 
 public class ExplosiveController : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class ExplosiveController : MonoBehaviour
     public float timeDelay = 0.5f;
     public Color flickerColor = new Color(255, 255, 255, 255);
     public string craterPrefabName;
+    public AudioClip fuseSound;
     public bool isTriggered = false;
 
     public SpriteRenderer sr
@@ -21,25 +23,24 @@ public class ExplosiveController : MonoBehaviour
         }
     }
 
+    private AudioSource audioSource;
     private Color baseColor;
-    //private HealthController healthController;
     private SpriteRenderer _sr;
 
     void OnEnable()
     {
+        audioSource = gameObject.GetOrAddComponent<AudioSource>();
         baseColor = sr.color;
         if (!isTriggered)
         {
             StartCoroutine("FlickerThenExplode");
         }
-        //else
-        //{
-        //    healthController = GetComponent<HealthController>();
-        //}
     }
 
     IEnumerator FlickerThenExplode()
     {
+        audioSource.clip = fuseSound;
+        audioSource.Play();
         int numFlickers = 10;
         for (int i = 0; i < numFlickers; i ++)
         {   //alternates color
@@ -48,6 +49,7 @@ public class ExplosiveController : MonoBehaviour
         }
         GameObject explosion = Spawner.Spawn("Explosion");
         explosion.transform.position = transform.position;
+        audioSource.Stop();
         gameObject.SetActive(false);
 
         if (craterPrefabName != null)

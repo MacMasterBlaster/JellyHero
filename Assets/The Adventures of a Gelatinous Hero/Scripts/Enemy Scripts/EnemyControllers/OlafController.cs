@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Paraphernalia.Components;
+using Paraphernalia.Utils;
 
 public class OlafController : MonoBehaviour
 {
-
     public float walkSpeed = 1;
     public float jumpSpeed = 10;
     public float attackInterval = 5;
@@ -11,9 +12,18 @@ public class OlafController : MonoBehaviour
     public float jumpTime = 5;
     public float waitTime = 2;
     public float agroHealth = 5;
+
+    public string jumpSoundName;
+    public string landingSoundName;
+    public string footStepName;
+    public string[] hurtSoundNames;
+    public string[] attackSoundNames;
+
     private Rigidbody2D _body;
     private Animator animator;
     private HealthController healthController;
+    private string hurt;
+    private string swipe;
 
     public Rigidbody2D body
     {
@@ -25,6 +35,7 @@ public class OlafController : MonoBehaviour
 
     void Awake()
     {
+        hurt = hurtSoundNames[Random.Range(0, hurtSoundNames.Length)];
         _body = gameObject.GetComponent<Rigidbody2D>();
         animator = gameObject.GetComponent<Animator>();
         healthController = gameObject.GetComponent<HealthController>();
@@ -52,6 +63,23 @@ public class OlafController : MonoBehaviour
 
     public void Jump ()
     {
+        AudioManager.PlayEffect(jumpSoundName);
         body.velocity = Vector2.up * jumpSpeed;
+    }
+
+    public void PlayFootStep()
+    {
+        AudioManager.PlayVariedEffect(footStepName);
+    }
+
+    public void PlayAttackSound()
+    {
+        swipe = attackSoundNames[Random.Range(0, attackSoundNames.Length)];
+        AudioManager.PlayEffect(swipe);
+    }
+
+    public void PlayLandingSound()
+    {
+        AudioManager.PlayEffect(landingSoundName);
     }
 }

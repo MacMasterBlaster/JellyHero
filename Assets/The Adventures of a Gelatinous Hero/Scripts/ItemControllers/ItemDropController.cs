@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Paraphernalia.Components;
+using Paraphernalia.Utils;
 
 [RequireComponent(typeof(CircleCollider2D))]
 [RequireComponent(typeof(SpriteRenderer))]
@@ -8,6 +10,7 @@ public class ItemDropController : MonoBehaviour
     public Sprite[] animationSprites;
     public float frameInterval = .2f;
     public string itemName;
+    public string itemPickUpSoundName;
     public bool randomize = false;
     private SpriteRenderer _spriteRenderer;
 
@@ -46,6 +49,7 @@ public class ItemDropController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            AudioManager.PlayEffect(itemPickUpSoundName);
             gameObject.SetActive(false);
             InventoryManager.AddToCount(itemName, 1);
         }

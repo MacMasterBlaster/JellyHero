@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using Paraphernalia.Components;
+using Paraphernalia.Utils;
 
 public class MysteriousSwordController : DirectionalComponent {
 
@@ -44,9 +47,11 @@ public class MysteriousSwordController : DirectionalComponent {
     }
 
     private Vector2 currentDir = Vector2.zero;
-    protected float angle = 0f;
+    private float angle = 0f;
     private bool isAnimating = false;
-    
+
+    public string[] attackSounds;
+
     void Awake()
     {
         DisableSword();
@@ -55,6 +60,7 @@ public class MysteriousSwordController : DirectionalComponent {
 
     public void EnableSword()
     {
+        string swipe = attackSounds[Random.Range(0, attackSounds.Length)];
         isAnimating = true;
         if (isBladePresent)
         {
@@ -63,7 +69,8 @@ public class MysteriousSwordController : DirectionalComponent {
         }
         if (isGripPresent) grip.enabled = true;
         if (isCrossGuardPesent) crossGuard.enabled = true;
-        if (isPommelPresent) pommel.enabled = true; 
+        if (isPommelPresent) pommel.enabled = true;
+        AudioManager.PlayEffect(swipe);
     }
 
     public void DisableSword()

@@ -63,7 +63,7 @@ public class PlayerControllerComponentAnimation : MonoBehaviour
             }
         }
 
-        if (Input.GetButtonDown("sword"))
+        if (Input.GetButtonDown("sword") /*|| Input.GetKeyDown("Space")*/)
         {
             attackAnim.SlashAttack();
         }

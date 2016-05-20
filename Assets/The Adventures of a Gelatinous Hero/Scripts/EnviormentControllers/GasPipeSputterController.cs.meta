@@ -1,10 +1,13 @@
 fileFormatVersion: 2
 guid: 0e3b801a21b8b4848b9eb5cdc8f2ea9b
-timeCreated: 1462512072
+timeCreated: 1463194629
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - audioSource: {instanceID: 0}
+  - pipeWarning: {fileID: 8300000, guid: 064cd179474c991469f14814b304ece6, type: 3}
+  - pipeActive: {fileID: 8300000, guid: b5e6f2ebb8bd433418282b35f3321f30, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

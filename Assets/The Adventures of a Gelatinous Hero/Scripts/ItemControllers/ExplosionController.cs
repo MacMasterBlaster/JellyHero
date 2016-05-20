@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Paraphernalia.Components;
+using Paraphernalia.Utils;
 
 [RequireComponent(typeof(CircleCollider2D))]
 
@@ -8,6 +10,8 @@ public class ExplosionController : MonoBehaviour {
     public float colliderLifeTime = 1;
     public float colliderSize = 1.5f;
     public float explosionLifeTime = 1.5f;
+
+    public string explosionSoundName;
 
     public CircleCollider2D cc
     {
@@ -25,6 +29,7 @@ public class ExplosionController : MonoBehaviour {
 
     void OnEnable()
     {
+        AudioManager.PlayEffect(explosionSoundName);
         StartCoroutine("ExplosionCoroutine");
     }
 
