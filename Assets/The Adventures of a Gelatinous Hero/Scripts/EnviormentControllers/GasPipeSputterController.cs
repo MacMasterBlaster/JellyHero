@@ -38,6 +38,7 @@ public class GasPipeSputterController : MonoBehaviour {
             yield return new WaitForSeconds(audioSource.clip.length);
             audioSource.Stop();
             gas.Stop();
+            bc.enabled = false;
             yield return new WaitForSeconds(timeInactive);
         }   
     }
