@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class InventoryManager : MonoBehaviour {
 
@@ -8,9 +9,16 @@ public class InventoryManager : MonoBehaviour {
 
     public Text bombCounterText;
     public Text coinCounterText;
+    public Text keyCounterText;
+
+    public GameObject menuPanel;
+    public Button restartButon;
 
     public int bombCount = 0;
     public int coinCount = 0;
+    public int keyCount = 0;
+
+    private PlayerControllerComponentAnimation player;
 
     void Awake()
     {
@@ -18,36 +26,59 @@ public class InventoryManager : MonoBehaviour {
         {
             instance = this;
         }
-        if (bombCounterText != null && coinCounterText != null)
+        if (bombCounterText != null && keyCounterText != null && coinCounterText != null)
         {
             SetBombCountText();
             SetCoinCountText();
+            SetKeyCountText();
         }
+
+        player = Object.FindObjectOfType(typeof(PlayerControllerComponentAnimation)) as PlayerControllerComponentAnimation;
+    }
+    void Update(){
+        if (!player.gameObject.activeSelf && !menuPanel.activeSelf){
+            StartCoroutine("ShowMenuPanelCoroutine");
+        }
+    }
+
+    IEnumerator ShowMenuPanelCoroutine (){ 
+        menuPanel.SetActive(true);
+        yield return new WaitForEndOfFrame();
+        restartButon.Select();
     }
 
     void SetBombCountText()
     {
         if (bombCounterText != null)
         {
-            bombCounterText.text = "X " + bombCount;
+            bombCounterText.text = bombCount.ToString();
         }
         else
         {
             Debug.Log("No Bomb Counter Present");
         }
     }
-
+	 void SetKeyCountText()
+    {
+        if (keyCounterText != null)
+        {
+            keyCounterText.text = keyCount.ToString();
+        }
+        else
+        {
+            Debug.Log("No Key Counter Present");
+        }
+    }
     void SetCoinCountText()
     {
         if (coinCounterText != null)
             {
-                coinCounterText.text = "X " + coinCount;
+                coinCounterText.text = coinCount.ToString();
             }
         else
         {
             Debug.Log("No Coin Counter Present");
         }
-
     }
 
     public static void AddToBombCount(int count)
@@ -68,6 +99,18 @@ public class InventoryManager : MonoBehaviour {
         instance.SetCoinCountText();
     }
 
+    public static void AddToKeyCount(int count)
+    {
+        instance.keyCount += count;
+        instance.SetKeyCountText();
+    }
+
+    public static void SubtractFromKeyCount(int count)
+    {
+        instance.keyCount -= count;
+        instance.SetKeyCountText();
+    }
+
     public static void AddToCount(string name, int count)
     {
         if (name == "bomb")
@@ -78,9 +121,20 @@ public class InventoryManager : MonoBehaviour {
         {
             AddToCoinCount(count);
         }
+        else if (name == "key"){
+        	AddToKeyCount(count);
+        }
         else
         {
             return;
         }
+    }
+
+    public void PressedQuitGame() {
+        Application.Quit();
+    }
+
+    public void PressedRestart() {
+        SceneManager.LoadScene("LargeMap");     
     }
 }

@@ -1,0 +1,500 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"key",
+				"keyCounterText"
+			],
+			[
+				"Set",
+				"SetKeyCountText"
+			],
+			[
+				"get",
+				"GetComponent"
+			],
+			[
+				"num",
+				"numberOfFlickers"
+			],
+			[
+				"gun",
+				"gunIndex"
+			],
+			[
+				"ammo",
+				"ammoCount"
+			],
+			[
+				"lO",
+				"Log"
+			],
+			[
+				"is",
+				"isAiming"
+			],
+			[
+				"Right",
+				"RightStickX"
+			],
+			[
+				"inp",
+				"inputControl"
+			],
+			[
+				"act",
+				"Action1"
+			],
+			[
+				"In",
+				"inputControl"
+			],
+			[
+				"shou",
+				"shouldJump"
+			],
+			[
+				"Righ",
+				"RightStickX"
+			],
+			[
+				"R",
+				"RightStickX"
+			],
+			[
+				"InputCon",
+				"InputControlType"
+			],
+			[
+				"_",
+				"_currentAmmo"
+			],
+			[
+				"Power",
+				"powerupPojectilePrefab"
+			],
+			[
+				"rigi",
+				"rigidbody2D"
+			],
+			[
+				"max",
+				"_maxAmmo"
+			],
+			[
+				"poe",
+				"powerUpProjectilePrefabName"
+			],
+			[
+				"Coll",
+				"collision"
+			],
+			[
+				"rci",
+				"ricocheCount"
+			],
+			[
+				"Input",
+				"InputControlType"
+			],
+			[
+				"De",
+				"Devices"
+			],
+			[
+				"Cha",
+				"PlatformerCharacterMotor"
+			],
+			[
+				"should",
+				"shouldShoot"
+			],
+			[
+				"tag",
+				"tag\tGameObject.*"
+			],
+			[
+				"colliso",
+				"collision\t[class]"
+			],
+			[
+				"OnColl",
+				"OnCollisionEnter\tCollider.*(collisionInfo)"
+			],
+			[
+				"string",
+				"string\tSerializedPropertyType.*"
+			],
+			[
+				"strin",
+				"string\t[class]"
+			],
+			[
+				"BoxCol",
+				"BoxCollider2D\t[class]"
+			],
+			[
+				"Gam",
+				"GameObject\t[class]"
+			],
+			[
+				"gam",
+				"gameObject.transform\t[property]"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Assets/The Adventures of a Gelatinous Hero/Scripts/PlayerControllers/PlayerController.cs",
+			"settings":
+			{
+				"buffer_size": 2007,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/The Adventures of a Gelatinous Hero/Scripts/UI Controllers/InventoryManager.cs",
+			"settings":
+			{
+				"buffer_size": 2441,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"togg",
+				"View: Toggle Menu"
+			]
+		],
+		"width": 1203.0
+	},
+	"console":
+	{
+		"height": 244.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+	],
+	"file_history":
+	[
+		"/F/Space Shooter Project_v02/Assets/SpaceShooter/Scripts/Managers/GameManager.cs",
+		"/C/Users/macor_000/Visual Effects Projects/Unity Projects/Space Shooter Project/Assets/SpaceShooter/Scripts/Controllers/PlayerController.cs",
+		"/C/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll",
+		"/C/Users/macor_000/Visual Effects Projects/Unity Projects/Space Shooter Project/Assets/SpaceShooter/Scripts/Controllers/EnemyFighterController.cs",
+		"/C/Users/macor_000/Visual Effects Projects/GitHub Projects/JellyHero2/Assets/The Adventures of a Gelatinous Hero/Scripts/EnviormentControllers/GasPipeSputterController.cs",
+		"/C/Users/macor_000/Visual Effects Projects/Unity Projects/Space Shooter Project/Assets/SpaceShooter/Scripts/Controllers/EnemyAsteroidController.cs",
+		"/C/Users/macor_000/Visual Effects Projects/Unity Projects/Space Shooter Project/Assets/SpaceShooter/Scripts/Spawners/AsteroidSpawner.cs",
+		"/C/Users/macor_000/Visual Effects Projects/Unity Projects/Space Shooter Project/Assets/SpaceShooter/Scripts/Paraphernalia/Extensions/GameObjectExtensions.cs",
+		"/C/Users/macor_000/Visual Effects Projects/GitHub Projects/JellyHero2/Assets/The Adventures of a Gelatinous Hero/Scripts/PlayerControllers/PlayerControllerComponentAnimation.cs",
+		"/C/Users/macor_000/Visual Effects Projects/Unity Projects/Space Shooter Project/Assets/SpaceShooter/Scripts/Paraphernalia/README.md",
+		"/C/Users/macor_000/Visual Effects Projects/GitHub Projects/JellyHero2/Assets/The Adventures of a Gelatinous Hero/Scripts/PlayerControllers/PlayerController.cs",
+		"/C/Users/macor_000/Visual Effects Projects/Unity Projects/Space Shooter Project/Assets/SpaceShooter/Scripts/HitFlickerComponent.cs",
+		"/C/Users/macor_000/Visual Effects Projects/Unity Projects/Space Shooter Project/Assets/SpaceShooter/Scripts/Paraphernalia/Attributes/ResourcePathAttribute.cs",
+		"/C/Users/macor_000/Visual Effects Projects/Unity Projects/Space Shooter Project/Assets/SpaceShooter/Scripts/Controllers/PowerupController.cs",
+		"/C/Users/macor_000/Visual Effects Projects/GitHub Projects/JellyHero2/Assets/The Adventures of a Gelatinous Hero/Scripts/Components/HitFlickerComponent.cs",
+		"/C/Users/macor_000/Visual Effects Projects/Unity Projects/Space Shooter Project/Assets/SpaceShooter/Scripts/InventoryManager.cs",
+		"/C/Users/macor_000/Visual Effects Projects/GitHub Projects/JellyHero2/Assets/The Adventures of a Gelatinous Hero/Scripts/UI Controllers/MainMenuManager.cs",
+		"/C/Users/macor_000/Visual Effects Projects/GitHub Projects/JellyHero2/Assets/The Adventures of a Gelatinous Hero/Scripts/Components/SoundMaterialComponent.cs",
+		"/C/Users/macor_000/Visual Effects Projects/GitHub Projects/JellyHero2/Assets/The Adventures of a Gelatinous Hero/Scripts/UI Controllers/InventoryManager.cs",
+		"/C/Users/macor_000/Visual Effects Projects/GitHub Projects/NightClassPlatformer/Assets/NightClassPlatformer/Scripts/PlatformerCharacterMotor.cs",
+		"/C/Users/macor_000/Visual Effects Projects/GitHub Projects/NightClassPlatformer/Assets/InControl/Scripts/Control/InputControlType.cs",
+		"/C/Users/macor_000/Visual Effects Projects/GitHub Projects/NightClassPlatformer/Assets/InControl/Scripts/Control/InputControl.cs",
+		"/C/Users/macor_000/Visual Effects Projects/GitHub Projects/NightClassPlatformer/Assets/InControl/Scripts/Device/InputDevice.cs",
+		"/C/Users/macor_000/Visual Effects Projects/GitHub Projects/NightClassPlatformer/Assets/NightClassPlatformer/Scripts/PenBullet.cs",
+		"/C/Users/macor_000/Visual Effects Projects/GitHub Projects/NightClassPlatformer/Assets/NightClassPlatformer/Scripts/GunController.cs",
+		"/C/Users/macor_000/Visual Effects Projects/Unity Projects/Space Shooter Project/Assets/SpaceShooter/Paraphernalia/Components/Projectile.cs",
+		"/C/Users/macor_000/Desktop/RandomnessDemo/RandomnessDemo/Assets/Scripts/Tests/RandomTest.cs",
+		"/C/Users/macor_000/Desktop/RandomnessDemo/RandomnessDemo/Assets/Scripts/RandomHelper.cs",
+		"/C/Users/macor_000/Visual Effects Projects/GitHub Projects/NightClassPlatformer/Assets/NightClassPlatformer/Scripts/PlatformerCharacterController.cs",
+		"/C/Users/macor_000/Visual Effects Projects/Unity Projects/Space Shooter Project/Assets/SpaceShooter/Scripts/Managers/GameManager.cs",
+		"/C/Users/macor_000/Visual Effects Projects/GitHub Projects/NightClassPlatformer/Assets/InControl/Scripts/Control/InputControlState.cs",
+		"/C/Users/macor_000/Visual Effects Projects/GitHub Projects/NightClassPlatformer/Assets/InControl/Scripts/Device/InputDeviceManager.cs",
+		"/C/Users/macor_000/Visual Effects Projects/GitHub Projects/NightClassPlatformer/Assets/NightClassPlatformer/Scripts/NightClassGameManager.cs",
+		"/C/Users/macor_000/Visual Effects Projects/GitHub Projects/NightClassPlatformer/Assets/NightClassPlatformer/Scripts/PowerUps/PowerUpProjectileController.cs",
+		"/C/Users/macor_000/Visual Effects Projects/GitHub Projects/NightClassPlatformer/Platformer.sublime-project",
+		"/C/Users/macor_000/Visual Effects Projects/GitHub Projects/NightClassPlatformer/Assets/Paraphernalia/Components/DirectionalTransform.cs",
+		"/C/Users/macor_000/Visual Effects Projects/GitHub Projects/NightClassPlatformer/Assets/Paraphernalia/.git",
+		"/C/Users/macor_000/Visual Effects Projects/GitHub Projects/NightClassPlatformer/Assets/NightClassPlatformer/Scripts/NightClassGameManager.cs.meta~d939e05b60978e6d890cad7f7f3d4dc4df334877",
+		"/C/Users/macor_000/Visual Effects Projects/GitHub Projects/NightClassPlatformer/Assets/InControl/Scripts/Unity/UnityInputDeviceManager.cs",
+		"/C/Users/macor_000/Visual Effects Projects/GitHub Projects/NightClassPlatformer/Assets/NightClassPlatformer/Scripts/PowerUpPrefabController.cs",
+		"/C/Users/macor_000/Visual Effects Projects/GitHub Projects/NightClassPlatformer/Assets/NightClassPlatformer/Scripts/PowerUps/PowerUpManager.cs",
+		"/C/Users/macor_000/Visual Effects Projects/GitHub Projects/NightClassPlatformer/Assets/NightClassPlatformer/Scripts/PowerUps/PowerUpPickUpController.cs",
+		"/C/Users/macor_000/Visual Effects Projects/GitHub Projects/NightClassPlatformer/Assets/NightClassPlatformer/Scripts/PowerUps/WeaponController.cs",
+		"/C/Users/macor_000/Visual Effects Projects/GitHub Projects/NightClassPlatformer/Assets/NightClassPlatformer/Scripts/SpawnedPowerUpController.cs",
+		"/C/Users/macor_000/Visual Effects Projects/GitHub Projects/NightClassPlatformer/Assets/InControl/Scripts/Unity/UnityInputDevice.cs",
+		"/C/Users/macor_000/Visual Effects Projects/GitHub Projects/NightClassPlatformer/Assets/NightClassPlatformer/Scripts/PowerUpManager.cs",
+		"/C/Users/macor_000/Visual Effects Projects/GitHub Projects/NightClassPlatformer/Assets/NightClassPlatformer/Scripts/PowerUpController.cs",
+		"/C/Users/macor_000/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/C/Users/macor_000/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/macor_000/AppData/Roaming/Sublime Text 3/Packages/User/C#.sublime-settings",
+		"/C/Users/macor_000/Visual Effects Projects/GitHub Projects/NightClassPlatformer/Assets/Paraphernalia.meta",
+		"/C/Users/macor_000/Visual Effects Projects/Unity Projects/Space Shooter Project/Assets/SpaceShooter/Scripts/Controllers/BulletControllerDefault.cs",
+		"/C/Users/macor_000/Visual Effects Projects/Unity Projects/Space Shooter Project/Assets/SpaceShooter/Scripts/Controllers/GunController.cs",
+		"/C/Users/macor_000/Visual Effects Projects/GitHub Projects/JellyHero/Assets/The Adventures of a Gelatinous Hero/Scripts/Enemy Scriots/EnemyControllers/NoviceAdventurerController.cs"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			" {",
+			"levelText",
+			"bombCount",
+			"        else if (inputControl.Target == InputControlType.RightStickX || inputControl.Target == InputControlType.RightStickY) {\n            Vector2 dir = new Vector2(inputDevice.GetControl(InputControlType.RightStickX), inputDevice.GetControl(InputControlType.RightStickY)); \n            gun.Fire(dir, motor.GetComponent<Rigidbody2D>().velocity);\n        }\n",
+			"heading",
+			"HasChanged",
+			"Debug",
+			"InputControlState",
+			"index",
+			"\tpublic GameObject defaultProjectilePrefab;\n",
+			"detect",
+			"public"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"ammoCount"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"folders":
+	[
+		{
+			"path": "F:\\JellyHero2\\Assets\\The Adventures of a Gelatinous Hero"
+		}
+	],
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Assets/The Adventures of a Gelatinous Hero/Scripts/PlayerControllers/PlayerController.cs",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 2007,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 270.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Assets/The Adventures of a Gelatinous Hero/Scripts/UI Controllers/InventoryManager.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2441,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 184.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 118.0
+	},
+	"pinned_build_system": "",
+	"project": "",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"inputcon",
+				"InControl\\Scripts\\Control\\InputControl.cs"
+			],
+			[
+				"inputde",
+				"InControl\\Scripts\\Device\\InputDevice.cs"
+			],
+			[
+				"inputdev",
+				"InControl\\Scripts\\Device\\InputDevice.cs"
+			],
+			[
+				"proje",
+				"Paraphernalia\\Components\\Projectile.cs"
+			],
+			[
+				"platformerco",
+				"NightClassPlatformer\\Scripts\\PlatformerCharacterController.cs"
+			],
+			[
+				"",
+				"Paraphernalia.meta"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\Users\\macor_000\\Visual Effects Projects\\GitHub Projects\\NightClassPlatformer\\Assets\\NightClassPlatformer\\Platformer.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 310.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

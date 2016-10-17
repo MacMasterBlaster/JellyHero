@@ -9,12 +9,9 @@ public class HitFlickerComponent : MonoBehaviour {
 
     public HealthController healthController;
 
-    public SpriteRenderer sr
-    {
-        get
-        {
-            if (_sr == null)
-            {
+    public SpriteRenderer sr {
+        get {
+            if (_sr == null) {
                 _sr = GetComponent<SpriteRenderer>();
             }
             return _sr;
@@ -23,32 +20,26 @@ public class HitFlickerComponent : MonoBehaviour {
 
     private SpriteRenderer _sr;
 
-    void Awake()
-    {
-        if (healthController == null)
-        {
+    void Awake() {
+        if (healthController == null) {
             healthController = GetComponent<HealthController>();
         }
         baseColor = sr.color;
     }
 
-    void OnEnable()
-    {
+    void OnEnable() {
         healthController.onHealthChanged += OnHealthChanged;
     }
 
-    void OnDisable()
-    {
+    void OnDisable() {
         healthController.onHealthChanged -= OnHealthChanged;
     }
 
-    public void Flicker()
-    {
+    public void Flicker() {
         StartCoroutine("FlickerCoroutine");
     }
 
-    IEnumerator FlickerCoroutine()
-    {
+    IEnumerator FlickerCoroutine() {
         int numFlickers = 10;
         for (int i = 0; i < numFlickers; i++)
         {   //alternates color
@@ -57,8 +48,7 @@ public class HitFlickerComponent : MonoBehaviour {
         }
     }
 
-    void OnHealthChanged(float health, float prevHealth, float maxHealth)
-    {
+    void OnHealthChanged(float health, float prevHealth, float maxHealth) {
         if (health < prevHealth)
         {
             Flicker();

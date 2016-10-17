@@ -30,7 +30,7 @@ public class OlafBossSpawner : MonoBehaviour
     {
         if (collider.gameObject.tag == "Player")
         {
-            Debug.Log("StartingBossFight!");
+            //Debug.Log("StartingBossFight!");
             StartCoroutine("SpawnCoroutine");
         }
     }
